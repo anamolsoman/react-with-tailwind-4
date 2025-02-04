@@ -1,10 +1,12 @@
 import "./App.css";
-import { Layout } from "./components/Layout.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.js";
+import Dashboard from "./components/Dashboard/Dashboard.js";
 function App() {
   return (
-    <>
-      <Layout />
-    </>
+    <div className="grid gap-4 grid-cols-[220px_1fr]  p-4 min-h-screen">
+      <Sidebar />
+      <Dashboard />
+    </div>
   );
 }
 

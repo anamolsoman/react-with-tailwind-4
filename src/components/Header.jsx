@@ -4,9 +4,7 @@ export const Header = () => {
   return (
     <header>
       <nav>
-        <div>
-          <Link>Logo</Link>
-        </div>
+        <div></div>
       </nav>
     </header>
   );

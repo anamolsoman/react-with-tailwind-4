@@ -4,9 +4,11 @@ import { createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import { RouterProvider } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
+import Home from "./pages/Home.js";
+import About from "./pages/About.js";
+import Users from "./pages/Users.tsx";
+import User from "./pages/User.tsx";
+import NotFoundPage from "./pages/NotFoundPage.js";
 const router = createBrowserRouter([
   {
     path: "/",
@@ -16,6 +18,11 @@ const router = createBrowserRouter([
   {
     path: "/about",
     element: <About />,
+  },
+  {
+    path: "/users",
+    element: <Users />,
+    children: [{ path: "/users/:id", element: <User /> }],
   },
 ]);
 

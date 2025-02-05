@@ -1,10 +1,11 @@
-import AvatarImg from "./avatar.svg";
+import AvatarImg from "/avatar.svg";
+
 const Account = () => {
   return (
     <div className="p-1 flex items-center border-b pb-2 border-b-gray-200">
       <img
         src={AvatarImg}
-        className="w-10 h-10 bg-blue-300 mr-2 rounded-full "
+        className="w-10 h-10 bg-black mr-2 rounded "
         alt="Avatar"
       />
       <div className="">

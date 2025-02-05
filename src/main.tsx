@@ -4,24 +4,22 @@ import { createBrowserRouter } from "react-router-dom";
 import "./index.css";
 import App from "./App.tsx";
 import { RouterProvider } from "react-router-dom";
-import Home from "./pages/Home.jsx";
-import About from "./pages/About.jsx";
-import NotFoundPage from "./pages/NotFoundPage.jsx";
+import NotFoundPage from "./pages/NotFoundPage.js";
+import { Layout } from "./app/Layout.tsx";
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home />,
+    element: <App />,
     errorElement: <NotFoundPage />,
-  },
-  {
-    path: "/about",
-    element: <About />,
   },
 ]);
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     {/* <App /> */}
-    <RouterProvider router={router}></RouterProvider>
+    <Layout>
+      {" "}
+      <RouterProvider router={router}></RouterProvider>
+    </Layout>
   </StrictMode>
 );
